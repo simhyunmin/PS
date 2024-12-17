@@ -1,10 +1,10 @@
 # [level 0] 숫자 찾기 - 120904 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120904) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120904?language=java) 
 
 ### 성능 요약
 
-메모리: 10.1 MB, 시간: 0.01 ms
+메모리: 84.4 MB, 시간: 0.03 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 12월 17일 23:40:08
+2024년 12월 18일 00:30:07
 
 ### 문제 설명
 
