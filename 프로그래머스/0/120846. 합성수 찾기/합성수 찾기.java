@@ -4,11 +4,8 @@ class Solution {
     public int solution(int n) {
         boolean[] isPrime = new boolean[n+1];
         
-        for (int i = 0 ; i <= n ; i++) {
+        for (int i = 2 ; i <= n ; i++) {
             isPrime[i] = true;
-            if ((i == 0) || (i == 1)) {
-                isPrime[i] = false;
-            }
         }
         
         for (int i = 2 ; i <= Math.sqrt(n) ; i++) {
@@ -19,7 +16,7 @@ class Solution {
             }
         }   
         int PrimeNum = 0;
-        for (int i = 0 ; i <= n ; i++) {
+        for (int i = 2 ; i <= n ; i++) {
             if (isPrime[i]) {
                 PrimeNum++;
             }
