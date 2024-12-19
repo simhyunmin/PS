@@ -4,9 +4,9 @@ class Solution {
         String [] mos = {".-","-...","-.-.","-..",".","..-.","--.","....","..",
                       ".---","-.-",".-..","--","-.","---",".--.","--.-",
                       ".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
-        char delimiter = ' '; 
+        String delimiter = " "; 
         
-        String[] parts = letter.split(String.valueOf(delimiter));
+        String[] parts = letter.split(delimiter);
         
         for (String part : parts) {
             int index = 0;
