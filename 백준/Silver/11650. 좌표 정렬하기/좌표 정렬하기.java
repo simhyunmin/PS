@@ -4,15 +4,13 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringBuilder sb = new StringBuilder();
         StringTokenizer st;
         int T = Integer.parseInt(br.readLine());
 
         int [][] arr = new int[T][2];
 
         for (int i = 0 ; i < T ; i++) {
-            String str = br.readLine();
-            st = new StringTokenizer(str);
+            st = new StringTokenizer(br.readLine());
             arr[i][0] = Integer.parseInt(st.nextToken());
             arr[i][1] = Integer.parseInt(st.nextToken());
         }
@@ -24,13 +22,12 @@ public class Main {
                 return a1[0] - a2[0];
             }
         });
-
-        for (int[] k : arr) {
-            for (int num : k) {
-                System.out.print(num + " ");
-            }
-            System.out.println();
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0 ; i < T ; i++) {
+            sb.append(arr[i][0] + " " + arr[i][1]).append('\n');
         }
+        System.out.print(sb);
+
 
     }
 }
