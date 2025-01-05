@@ -11,14 +11,20 @@ public class Main {
             int numCase = 0;
             int emptyCase = 0;
             for (char c : str.toCharArray()) {
-                if (Character.isUpperCase(c)) {
-                    upperCase++;
-                } else if (Character.isLowerCase(c)) {
-                    lowerCase++;
-                } else if (Character.isDigit(c)) {
-                    numCase++;
-                } else if (c == ' ') {
-                    emptyCase++;
+                switch (c) {
+                    case ' ':
+                        emptyCase++;
+                        break;
+                    default:
+                        if (Character.isUpperCase(c)) {
+                            upperCase++;
+                        } else if (Character.isLowerCase(c)) {
+                            lowerCase++;
+                        } else if (Character.isDigit(c)) {
+                            numCase++;
+                        }
+                        break;
+
                 }
             }
             System.out.println(lowerCase + " " + upperCase + " " + numCase + " " + emptyCase);
