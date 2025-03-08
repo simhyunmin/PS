@@ -3,7 +3,6 @@ class Solution {
 
         int[][] answer = new int[arr1.length][arr2[0].length];
         int row1, col2, row2;
-        int index = 0;
         int sum = 0;
         
         for (row1 = 0; row1 < arr1.length; row1++) {
