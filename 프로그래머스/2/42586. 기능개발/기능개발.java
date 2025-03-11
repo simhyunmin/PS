@@ -12,7 +12,6 @@ class Solution {
         }
 
         Stack<Integer> answer = new Stack<>();
-        int index = 0;
         int time = queue.peek();
         int popCount = 0;
         while (!queue.isEmpty()) {
@@ -20,7 +19,6 @@ class Solution {
                 time = queue.peek();
                 answer.push(popCount);
                 popCount = 0;
-                index++;
             } else {
                 popCount++;
                 queue.poll();
