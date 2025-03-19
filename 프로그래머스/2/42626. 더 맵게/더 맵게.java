@@ -9,18 +9,10 @@ class Solution {
 
         int operations = 0;
         while (minHeap.size() > 1 && minHeap.peek() < K) {
-            int first = minHeap.poll();
-            int second = minHeap.poll();
-
-            int mixed = first + (second * 2);
+            int mixed = minHeap.remove() + (minHeap.remove() * 2);
             minHeap.offer(mixed);
             operations++;
         }
-
-        if (minHeap.peek() < K) {
-            return -1;
-        }
-
-        return operations;
+        return ((minHeap.peek() < K) ? -1 : operations);
     }
 }
