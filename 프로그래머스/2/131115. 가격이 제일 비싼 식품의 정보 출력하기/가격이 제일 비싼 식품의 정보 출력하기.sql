@@ -1,0 +1,3 @@
+select *
+from FOOD_PRODUCT
+where PRICE = (SELECT MAX(PRICE) FROM FOOD_PRODUCT);
