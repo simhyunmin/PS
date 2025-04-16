@@ -1,0 +1,13 @@
+#ANIMAL_INS에서 Spayed가 아니었던 동물 중
+#ANIMAL_OUTS에서 Spayed인 동물 조회하면 될듯
+SELECT ao.ANIMAL_ID, ao.ANIMAL_TYPE, ao.NAME
+FROM ANIMAL_OUTS AS ao
+JOIN ANIMAL_INS AS ai ON ao.ANIMAL_ID = ai.ANIMAL_ID
+WHERE (ao.SEX_UPON_OUTCOME LIKE 'Spayed%'
+    OR ao.SEX_UPON_OUTCOME LIKE 'Neutered%')
+    AND ao.ANIMAL_ID NOT IN (
+        SELECT ANIMAL_ID 
+        FROM ANIMAL_INS 
+        WHERE SEX_UPON_INTAKE LIKE 'Spayed%' 
+              OR SEX_UPON_INTAKE LIKE 'Neutered%')
+ORDER BY ao.ANIMAL_ID;
